@@ -61,9 +61,21 @@ const onMovieSelect = async (movie, summaryElement, side) => {
   } else {
     rightMovie = response.data;
   }
+
+  if (leftMovie && rightMovie) {
+    runComparison();
+  }
 };
 
+const runComparison = () => {};
+
 const movieTemplate = (movieDetail) => {
+  const dollars = parseInt(
+    movieDetail.BoxOffice.replace(/\$/g, "").replace(/,/g, "")
+  );
+
+  const metascore = parseInt(movieDetail.Metascore);
+
   return `
   <article class="media">
     <figure class="media-left">
