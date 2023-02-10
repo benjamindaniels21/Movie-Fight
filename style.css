@@ -46,3 +46,11 @@ figure .image img {
   height: 50px;
   margin-right: 10px;
 }
+
+@media screen and (min-width: 400px){
+  .container{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+}
