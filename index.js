@@ -10,6 +10,7 @@ const autoCompleteConfig = {
     return movie.Title;
   },
   async fetchData(searchTerm) {
+    console.log("FETCHING!!!");
     const response = await axios.get("http://www.omdbapi.com/", {
       params: {
         apikey: "9649bc20",
